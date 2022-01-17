@@ -1,0 +1,95 @@
+tl-phone-apps {
+    padding: 5px 10px;
+    margin-bottom: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    div.app {
+        position: relative;
+
+        margin: var(--townland-phone-app-margin);
+        width: var(--townland-phone-app-width);
+        max-width: var(--townland-phone-app-width);
+        height: var(--townland-phone-app-height);
+        max-height: var(--townland-phone-app-height);
+
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        div.icon {
+            position: relative;
+            top: 0;
+
+            width: var(--townland-phone-app-icon-size);
+            height: var(--townland-phone-app-icon-size);
+
+            border-radius: var(--townland-phone-app-icon-border-radius);
+
+            cursor: pointer;
+
+            color: var(--icon-color);
+
+            background-color: var(--background);
+            background-image: var(--image);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+            box-shadow: 0 4px 8px var(--shadow, rgba(0, 0, 0, 0.2));
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: all 0.1s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            &:active {
+                transform: scale(0.9);
+            }
+
+            .material-icons {
+                width: var(--icon-size);
+                height: var(--icon-size);
+                font-size: var(--icon-size);
+            }
+        }
+
+        span {
+            font-size: var(--townland-phone-app-name-font-size);
+            color: var(--townland-phone-app-name-color);
+
+            text-align: center;
+            letter-spacing: -1px;
+
+            margin: auto 5px 0 5px;
+        }
+    }
+}
+
+tl-phone-dock.show-apps tl-phone-apps div.app {
+    transform: scale(0);
+    animation: app-fade 0.4s forwards;
+    animation-delay: calc(var(--townland-phone-animation-speed) * var(--index) + 0.2s);
+}
+
+@keyframes app-fade {
+    0% {
+        transform: scale(0);
+    }
+
+    70% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

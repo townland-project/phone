@@ -1,0 +1,39 @@
+tl-phone-navigation {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: var(--townland-phone-navigation-height);
+
+    button {
+        width: 36px;
+        height: 36px;
+
+        background-color: transparent;
+
+        border: none;
+
+        cursor: pointer;
+
+        margin: 0 8%;
+
+        transition: all var(--townland-phone-animation-speed);
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            fill: var(--townland-phone-navigation-fill);
+        }
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        &:active {
+            transform: scale(0.8);
+        }
+    }
+}

@@ -1,0 +1,119 @@
+tl-phone-dock {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    height: var(--townland-phone-dock-size);
+
+    background-color: var(--townland-phone-dock-background-color);
+
+    border-radius: var(--townland-phone-dock-border-radius);
+
+    box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.5);
+
+    z-index: 99;
+
+    position: absolute;
+
+    left: var(--townland-phone-dock-margin);
+    right: var(--townland-phone-dock-margin);
+    bottom: var(--townland-phone-dock-margin);
+
+    backdrop-filter: blur(10px);
+
+    overflow: hidden;
+
+    transition: all var(--townland-phone-animation-speed);
+
+    &:not(.hide).show-apps {
+        height: calc(100% - var(--townland-phone-status-height));
+
+        border-radius: 0 0 var(--townland-phone-dock-border-radius) var(--townland-phone-dock-border-radius);
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        tl-phone-apps {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        div.items {
+            padding: var(--townland-phone-dock-item-margin);
+        }
+    }
+
+    &.hide {
+        bottom: calc((var(--townland-phone-dock-size) * -1) - 50px);
+
+        transform: scale(0.5);
+    }
+        
+    tl-phone-apps {
+        opacity: 0;
+        pointer-events: none;
+        transition: all var(--townland-phone-animation-speed);
+    }
+
+    div.items {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        height: var(--townland-phone-dock-size);
+        min-height: var(--townland-phone-dock-size);
+
+        padding: 0;
+
+        transition: all var(--townland-phone-animation-speed);
+
+        border-top: 2px solid rgba($color: #000000, $alpha: 0.08);
+    }
+
+
+    div.item {
+        position: relative;
+
+        width: calc(var(--townland-phone-dock-size) - 10px);
+        height: calc(var(--townland-phone-dock-size) - 10px);
+
+        margin: 0 var(--townland-phone-dock-item-margin);
+
+        border-radius: var(--townlnad-phone-dock-item-border-radius);
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        cursor: pointer;
+        
+        color: var(--fill);
+        background-color: var(--background);
+        background-image: var(--image);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        transition: all var(--townland-phone-animation-speed);
+        
+        &:active {
+            transform: scale(0.95);
+        }
+
+        .material-icons {
+            width: 24px;
+            height: 24px;
+            font-size: 24px;
+        }
+    }
+
+    div#dock-break-line {
+        width: 1px;
+        height: 80%;
+
+        margin: 0 5px;
+
+        background-color: rgba($color: #000000, $alpha: 0.2);
+    }
+}

@@ -1,0 +1,7 @@
+<div class="app" style="--index: 1; --icon-size: 24px; --icon-color: rgba(0, 0, 0, 0.5); --background: #1dd1a1; --shadow: #10ac84;">
+    <div class="icon">
+        <i class="material-icons">add</i>
+    </div>
+
+    <span>Add</span>
+</div>

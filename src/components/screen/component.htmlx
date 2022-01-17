@@ -1,0 +1,6 @@
+<tl-phone-status></tl-phone-status>
+<section>
+    <tl-phone-home></tl-phone-home>
+    <tl-phone-dock></tl-phone-dock>
+    <div id="phone-app"></div>
+</section>

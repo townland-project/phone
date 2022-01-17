@@ -1,0 +1,7 @@
+<tl-phone-apps></tl-phone-apps>
+<div class="items">
+    <div class="item menu" bind-click="ToggleApps()" style="--background: #fc5c65; --fill: rgba(255,255,255, 0.5);">
+        <i class="material-icons">apps</i>
+    </div>
+    <div id="dock-break-line"></div>
+</div>

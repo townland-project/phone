@@ -1,0 +1,6 @@
+<div class="splash">
+    <div class="icon" style="--image: url('{{image}}');"></div>
+    <span>{{name}}</span>
+</div>
+
+<iframe sandbox="allow-same-origin allow-scripts" id="phone-app-iframe" src="{{src}}"></iframe>

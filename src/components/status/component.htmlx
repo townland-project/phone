@@ -1,0 +1,5 @@
+<div class="row">
+    <span class="time" bind-value="time"></span>
+    <div class="space"></div>
+    <i class="material-icons">add</i>
+</div>

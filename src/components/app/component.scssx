@@ -1,0 +1,61 @@
+tl-phone-app {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+
+    div.splash {
+        z-index: 2;
+
+        position: absolute;
+
+        inset: 0 0 0 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        background-color: inherit;
+
+        opacity: 1;
+
+        transition: all var(--townland-phone-animation-speed);
+
+        &.hide {
+            opacity: 0;
+            z-index: -1;
+        }
+
+        div.icon {
+            width: 5em;
+            height: 5em;
+
+            border-radius: var(--townlnad-phone-dock-item-border-radius);
+
+            background-image: var(--image);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        span {
+            position: absolute;
+
+            bottom: 2em;
+        }
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+
+        border: none;
+
+        z-index: 1;
+    }
+}

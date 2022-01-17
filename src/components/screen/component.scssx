@@ -1,0 +1,62 @@
+tl-phone-screen {
+    position: relative;
+
+    display: inline-flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: calc(var(--townland-phone-border-radius) - 2px);
+
+    background-color: #ffffff;
+    background-image: var(--townland-phone-screen-wallpaper);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    box-shadow: inset 0 0 10px rgba($color: #000000, $alpha: 0.4);
+    
+    filter: brightness(var(--brightness));
+
+    overflow: hidden;
+
+    section {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        height: 100%;
+
+        overflow: hidden;
+
+        &:not(.show-app) div#phone-app {
+            z-index: -1;
+
+            opacity: 0;
+        }
+
+        div#phone-app {
+            position: absolute;
+
+            inset: 0 0 0 0;
+
+            z-index: 2;
+
+            opacity: 1;
+
+            transition: all 0.2s;
+        }
+
+        div#phone-app,
+        tl-phone-home,
+        tl-phone-app {
+            width: 100%;
+            min-height: 100%;
+
+            transition: all var(--townland-phone-animation-speed);
+        }
+    }
+}

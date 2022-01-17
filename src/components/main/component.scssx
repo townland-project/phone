@@ -1,0 +1,55 @@
+tl-phone {
+    --townland-phone-animation-speed: 0.3s;
+    --townland-phone-width: 300px;
+    --townland-phone-height: 450px;
+    --townland-phone-border-size: 10px;
+    --townland-phone-border-radius: 1em;
+    --townland-phone-background-color: #575fcf;
+    --townland-phone-shadow-color: #3c40c6;
+    // screen
+    --townland-phone-screen-wallpaper: url("https://cdn.townland.xyz/phone/blocks.jpg");
+    // status
+    --townland-phone-status-height: 28px;
+    --townland-phone-status-padding: 10px;
+    --townland-phone-status-icon-size: 20px;
+    --townland-phone-status-blur: 15px;
+    --townland-phone-status-color: #ffffff;
+    --townland-phone-status-background-color: rgba(255, 255, 255, 0.5);
+    // navigation
+    --townland-phone-navigation-height: 46px;
+    --townland-phone-navigation-fill: rgba(0, 0, 0, 0.4);
+    // dock
+    --townland-phone-dock-margin: 8px;
+    --townland-phone-dock-size: 45px;
+    --townland-phone-dock-padding: 0;
+    --townland-phone-dock-border-radius: 12px;
+    --townland-phone-dock-background-color: rgba(255, 255, 255, 0.3);
+    --townland-phone-dock-item-margin: 5px;
+    --townlnad-phone-dock-item-border-radius: 8px;
+    // app
+    --townland-phone-app-margin: 10px;
+    --townland-phone-app-width: 45px;
+    --townland-phone-app-height: 70px;
+    --townland-phone-app-icon-size: 43px;
+    --townland-phone-app-icon-border-radius: 35% / 40%;
+    --townland-phone-app-name-font-size: 14px;
+    --townland-phone-app-name-color: rgba(255, 255, 255, 0.8);
+
+    width: var(--townland-phone-width);
+    height: var(--townland-phone-height);
+
+    padding: var(--townland-phone-border-size);
+    padding-bottom: 0;
+
+    border-radius: var(--townland-phone-border-radius);
+
+    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.3), 0 10px var(--townland-phone-shadow-color);
+
+    background-color: var(--townland-phone-background-color);
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: "Source Sans 3", sans-serif;
+}
